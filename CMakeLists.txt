@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0.0)
+cmake_minimum_required(VERSION 3.10)
 
 set(PACKAGE_NAME CMAKE_GROUND)
 set(PACKAGE_VERSION 0.1.1)
@@ -20,23 +20,7 @@ set(${PACKAGE_NAME}_TEST_PATH "${${PACKAGE_NAME}_PATH}/test")
 set(${PACKAGE_NAME}_RESOURCE_PATH "${${PACKAGE_NAME}_PATH}/resource")
 set(${PACKAGE_NAME}_MODULE_PATH "${${PACKAGE_NAME}_PATH}/module")
 
-function(get_subdirectories RESULT INPUT_FOLDER_NAME)
-  file(GLOB ELEMENTS RELATIVE ${INPUT_FOLDER_NAME} ${INPUT_FOLDER_NAME}/*)
-  set(FOLDER_LIST "")
-  foreach(ELEMENT ${ELEMENTS})
-    if(IS_DIRECTORY ${INPUT_FOLDER_NAME}/${ELEMENT})
-      list(APPEND FOLDER_LIST ${ELEMENT})
-    endif()
-  endforeach()
-  set(${RESULT} ${FOLDER_LIST} PARENT_SCOPE)
-endfunction()
-
-get_subdirectories(SUB_MODULES ${${PACKAGE_NAME}_MODULE_PATH})
-
-foreach(MODULE ${SUB_MODULES})
-  message("Sub module: ${MODULE}")
-  add_subdirectory("${${PACKAGE_NAME}_MODULE_PATH}/${MODULE}")
-endforeach()
+add_subdirectory(${${PACKAGE_NAME}_MODULE_PATH})
 
 add_executable(main src/main.cpp)
 target_link_libraries(main
