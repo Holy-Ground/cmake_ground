@@ -1,9 +1,9 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.11)
 
 set(PACKAGE_NAME CMAKE_GROUND)
 set(PACKAGE_VERSION 0.1.1)
 
-project(PACKAGE_NAME)
+project(${PACKAGE_NAME} VERSION ${PACKAGE_VERSION} LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -19,7 +19,9 @@ set(${PACKAGE_NAME}_INCLUDE_PATH "${${PACKAGE_NAME}_PATH}/include")
 set(${PACKAGE_NAME}_TEST_PATH "${${PACKAGE_NAME}_PATH}/test")
 set(${PACKAGE_NAME}_RESOURCE_PATH "${${PACKAGE_NAME}_PATH}/resource")
 set(${PACKAGE_NAME}_MODULE_PATH "${${PACKAGE_NAME}_PATH}/module")
+set(${PACKAGE_NAME}_THIRDPARTY_PATH "${${PACKAGE_NAME}_PATH}/thirdparty")
 
+add_subdirectory(${${PACKAGE_NAME}_THIRDPARTY_PATH})
 add_subdirectory(${${PACKAGE_NAME}_MODULE_PATH})
 
 add_executable(main src/main.cpp)

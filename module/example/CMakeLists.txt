@@ -1,5 +1,3 @@
-cmake_minimum_required(VERSION 3.10)
-
 set(PACKAGE_NAME CMAKE_GROUND_EXAMPLE)
 set(PACKAGE_VERSION 0.1.1)
 

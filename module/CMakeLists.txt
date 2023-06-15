@@ -1,5 +1,3 @@
-cmake_minimum_required(VERSION 3.10)
-
 message(STATUS "Start configuration for submodules.")
 
 file(GLOB ELEMENTS "*")
@@ -12,4 +10,4 @@ foreach(ELEMENT ${ELEMENTS})
   endif()
 endforeach()
 
-message(STATUS "Finish configuration for submodules.")
+message(STATUS "Finish configuration for submodules.\n")
