@@ -35,8 +35,7 @@ get_subdirectories(SUB_MODULES ${${PACKAGE_NAME}_MODULE_PATH})
 
 foreach(MODULE ${SUB_MODULES})
   message("Sub module: ${MODULE}")
-  set(SUB_MODULE_PATH "${${PACKAGE_NAME}_MODULE_PATH}/${MODULE}")
-  add_subdirectory(${SUB_MODULE_PATH})
+  add_subdirectory("${${PACKAGE_NAME}_MODULE_PATH}/${MODULE}")
 endforeach()
 
 add_executable(main src/main.cpp)
