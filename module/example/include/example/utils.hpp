@@ -1,13 +1,17 @@
 // Copyright (c) 2023 HolyGround, All Rights Reserved.
 // Authors: EunSung Yang
 
-#ifndef CMAKE__UTILS_HPP_
-#define CMAKE__UTILS_HPP_
+#ifndef EXAMPLE__UTILS_HPP_
+#define EXAMPLE__UTILS_HPP_
+
+#include <string>
 
 namespace holyground::example {
 /**
- * @brief Print "Hello World!" to stdout.
+ * @brief Print a massage.
+ *
+ * @param massage The massage to print.
  */
-void PrintHelloWorld();
+void Print(const std::string& massage);
 } // namespace holyground::example
-#endif // CMAKE__UTILS_HPP_
+#endif // EXAMPLE__UTILS_HPP_

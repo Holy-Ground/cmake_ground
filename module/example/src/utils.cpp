@@ -6,5 +6,5 @@
 #include "example/utils.hpp"
 
 namespace holyground::example {
-void PrintHelloWorld() { std::cout << "Hello World!" << std::endl; }
+void Print(const std::string &massage) { std::cout << massage << std::endl; }
 } // namespace holyground::example

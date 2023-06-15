@@ -6,6 +6,6 @@
 #include "example/utils.hpp"
 
 auto main() -> int32_t {
-  holyground::example::PrintHelloWorld();
+  holyground::example::Print("Hello World!");
   return 0;
 }
