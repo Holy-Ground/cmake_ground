@@ -6,5 +6,5 @@
 #include "example/utils.hpp"
 
 namespace holyground::example {
-// TEST(ExampleUtils, Print) {}
+TEST(ExampleUtils, Print) { EXPECT_NO_THROW(example::Print("for test")); }
 } // namespace holyground::example
