@@ -1,7 +1,9 @@
 message(STATUS "Start configuration for GTest.")
 
-find_package(GTEST QUIET HINTS ${GTEST_INSTALL_DIR}/lib/cmake/GTEST)
-message(STATUS ${GTEST_INSTALL_DIR})
+set(GTEST_INSTALL_PATH ${CMAKE_BINARY_DIR}/thirdparty/gtest/install/${CMAKE_BUILD_TYPE})
+
+find_package(GTest QUIET HINTS ${GTEST_INSTALL_PATH}/lib/cmake/GTest)
+message(STATUS ${GTEST_INSTALL_PATH})
 if(GTest_FOUND)
   message(STATUS "Found GTest.")
 else()
@@ -14,9 +16,5 @@ else()
     CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=${CMAKE_BINARY_DIR}/install/${CMAKE_BUILD_TYPE}
   )
 endif()
-
-set(GTEST_INCLUDE_DIR ${GTEST_INSTALL_DIR}/include)
-set(GTEST_LIBS GTest::gtest)
-include_directories(${GTEST_INCLUDE_DIR})
 
 message(STATUS "Finish configuration for GTest.\n")

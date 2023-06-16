@@ -1,10 +1,6 @@
 message(STATUS "Start configuration for tests.")
 
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_SOURCE_DIR}/cmake)
-
-include(find_gtest)
-include(CTest)
-enable_testing()
+include(${CMAKE_SOURCE_DIR}/cmake/find_gtest.cmake)
 
 file(GLOB ELEMENTS "*")
 
