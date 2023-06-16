@@ -1,7 +1,7 @@
-message(STATUS "Start configuration for GTEST.")
+message(STATUS "Start configuration for GTest.")
 
-find_package(GTEST QUIET HINTS ${GTEST_INSTALL_PATH}/lib/cmake/GTEST)
-
+find_package(GTEST QUIET HINTS ${GTEST_INSTALL_DIR}/lib/cmake/GTEST)
+message(STATUS ${GTEST_INSTALL_DIR})
 if(GTest_FOUND)
   message(STATUS "Found GTest.")
 else()
@@ -15,8 +15,8 @@ else()
   )
 endif()
 
-set(GTEST_INCLUDE_PATH ${GTEST_INSTALL_DIR}/include)
+set(GTEST_INCLUDE_DIR ${GTEST_INSTALL_DIR}/include)
 set(GTEST_LIBS GTest::gtest)
-include_directories(${GTEST_INCLUDE_PATH})
+include_directories(${GTEST_INCLUDE_DIR})
 
 message(STATUS "Finish configuration for GTest.\n")

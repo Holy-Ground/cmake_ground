@@ -37,3 +37,5 @@ target_include_directories(${LIBRARY_NAME} PUBLIC
 target_compile_options(${LIBRARY_NAME} PRIVATE
   -Wall -Wextra -Wpedantic -Werror
 )
+
+add_subdirectory(${${LIBRARY_NAME}_TEST_PATH})
