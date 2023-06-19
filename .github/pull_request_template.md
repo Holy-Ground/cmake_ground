@@ -22,7 +22,7 @@
 
 - [ ] Code follows the style guide.
 - [ ] Tests have been performed.
-- [ ] Doxeygen has been written.
+- [ ] Doxygen has been written.
 
 ## Additional Information (Optional)
 
