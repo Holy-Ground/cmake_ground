@@ -11,7 +11,7 @@ else()
   ExternalProject_Add(
     GTEST
     GIT_REPOSITORY https://github.com/google/googletest.git
-    GIT_TAG release-1.8.1
+    GIT_TAG v1.13.0
     PREFIX ${CMAKE_BINARY_DIR}/gtest-prefix
     CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=${CMAKE_BINARY_DIR}/install/${CMAKE_BUILD_TYPE}
   )
