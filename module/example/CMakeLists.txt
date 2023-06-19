@@ -28,7 +28,7 @@ message(STATUS "${LIBRARY_NAME}_THIRDPARTY_PATH: ${${LIBRARY_NAME}_THIRDPARTY_PA
 set(${LIBRARY_NAME}_SOURCE_FILES
   src/utils.cpp
 )
-add_library(${LIBRARY_NAME}
+add_library(${LIBRARY_NAME} STATIC
   ${${LIBRARY_NAME}_SOURCE_FILES}
 )
 target_include_directories(${LIBRARY_NAME} PUBLIC
