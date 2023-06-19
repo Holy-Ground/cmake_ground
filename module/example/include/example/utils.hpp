@@ -12,6 +12,6 @@ namespace holyground::example {
  *
  * @param massage The massage to print.
  */
-void Print(const std::string& massage);
+void Print(const std::string &massage);
 } // namespace holyground::example
 #endif // EXAMPLE__UTILS_HPP_
