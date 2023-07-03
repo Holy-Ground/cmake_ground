@@ -12,3 +12,8 @@ Changelog for package cmake_ground
 * Added Example cmake codes with main.cpp
 * Added Example library with a print hello world func
 * Contributors: EunSung Yang
+
+1.0.1 (2023-07-03)
+------------------
+* Fixed typo massage to message
+* Contributors: EunSung Yang
