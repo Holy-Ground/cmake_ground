@@ -8,10 +8,10 @@
 
 namespace holyground::example {
 /**
- * @brief Print a massage.
+ * @brief Print a message.
  *
- * @param massage The massage to print.
+ * @param message The message to print.
  */
-void Print(const std::string &massage);
+void Print(const std::string &message);
 } // namespace holyground::example
 #endif // EXAMPLE__UTILS_HPP_
