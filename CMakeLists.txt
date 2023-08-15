@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.11)
 
 set(PACKAGE_NAME CMAKE_GROUND)
-set(PACKAGE_VERSION 1.0.0)
+set(PACKAGE_VERSION 1.1.0)
 
 project(${PACKAGE_NAME} VERSION ${PACKAGE_VERSION} LANGUAGES CXX)
 
@@ -34,13 +34,10 @@ message(STATUS "${PACKAGE_NAME}_THIRDPARTY_PATH: ${${PACKAGE_NAME}_THIRDPARTY_PA
 add_subdirectory(${${PACKAGE_NAME}_THIRDPARTY_PATH})
 add_subdirectory(${${PACKAGE_NAME}_MODULE_PATH})
 
-add_executable(main src/main.cpp)
-target_link_libraries(main
+add_executable(MAIN src/main.cpp)
+target_link_libraries(MAIN
   CMAKE_GROUND_EXAMPLE
 )
-target_include_directories(main PUBLIC
-  ${${PACKAGE_NAME}_INCLUDE_PATH}
-)
-target_compile_options(main PRIVATE
+target_compile_options(MAIN PRIVATE
   -Wall -Wextra -Wpedantic -Werror
 )
