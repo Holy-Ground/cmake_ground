@@ -17,3 +17,9 @@ Changelog for package cmake_ground
 ------------------
 * Fixed typo massage to message
 * Contributors: EunSung Yang
+
+1.0.2 (2023-08-15)
+------------------
+* Added company name to license file
+* Fixed a wrong naming convention in executable name
+* Contributors: EunSung Yang
